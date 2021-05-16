@@ -39,9 +39,10 @@ const pizzas = [
       },
     ],
     category: "veg",
+    image: "https://www.dominos.co.in/files/items/IndianChickenTikka.jpg",
+
     description:
       "Corn over the base makes it look beautiful. It is served with tomato sauce and chili flakes are sprinkled over the topping according the taste. After mixing all the ingredients, it is baked by adding cheese and corn for added flavor to pizza. Corn adds health and sweet taste to the pizza.",
-    image: "https://www.crazymasalafood.com/wp-content/images/golden-1.jpg",
   },
   {
     name: "Jalapeno & Red Paprika Pizza",
