@@ -15,7 +15,6 @@ const Pizza = ({ pizza }) => {
       <h1>{pizza.name}</h1>
       <img
         src={pizza.image}
-        alt="pizza menu item"
         className="img-fluid"
         onClick={handleShow}
         style={{ height: "200px", width: "200px" }}
@@ -69,7 +68,7 @@ const Pizza = ({ pizza }) => {
           <img
             src={pizza.image}
             className="img-fluid"
-            alt="pizza modal"
+            alt="pizza image modal"
             style={{
               height: "400px",
             }}
