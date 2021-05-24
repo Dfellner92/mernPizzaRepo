@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
-        <a className="navbar-brand" href="localhost:3000">
+        <a className="navbar-brand" href="/">
           Dan's Pizza
         </a>
         <button
@@ -27,7 +27,7 @@ export default function Navbar() {
         >
           <ul className="navbar-nav m1-auto">
             <li className="nav-item">
-              <a className="nav-link" href="localhost:3000">
+              <a className="nav-link" href="">
                 Login
               </a>
             </li>
