@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../actions/cartActions";
+import { deleteFromCart } from "../actions/cartActions";
 
 export default function Cartscreen() {
   const cartstate = useSelector((state) => state.cartReducer);
@@ -48,7 +49,11 @@ export default function Cartscreen() {
                 />
               </div>
               <div className="m-1 w-100">
-                <i class="fa fa-trash mt-4" aria-hidden="true"></i>
+                <i
+                  class="fa fa-trash mt-4"
+                  aria-hidden="true"
+                  onClick={() => dispatch(deleteFromCart(item))}
+                ></i>
               </div>
             </div>
           ))}
