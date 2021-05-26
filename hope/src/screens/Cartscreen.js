@@ -6,6 +6,7 @@ import { deleteFromCart } from "../actions/cartActions";
 export default function Cartscreen() {
   const cartstate = useSelector((state) => state.cartReducer);
   const cartItems = cartstate.cartItems;
+  let subtotal = cartItems.reduce((x, item) => x + item.price, 0);
   const dispatch = useDispatch();
 
   return (
@@ -58,8 +59,9 @@ export default function Cartscreen() {
             </div>
           ))}
         </div>
-        <div className="col-md-4">
-          <h1>other</h1>
+        <div className="col-md-4 text-right">
+          <h2 style={{ fontSize: "45px" }}>Subtotal: ${subtotal}</h2>
+          <button className="btn">CHECK OUT</button>
         </div>
       </div>
     </div>

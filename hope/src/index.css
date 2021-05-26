@@ -56,3 +56,7 @@ select {
 .fa-trash {
   color: red;
 }
+
+.col-md-4 {
+  text-align: right;
+}
