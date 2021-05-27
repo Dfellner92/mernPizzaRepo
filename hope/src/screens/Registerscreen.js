@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 export default function Registerscreen() {
   const [name, setName] = useState("");
@@ -7,7 +7,7 @@ export default function Registerscreen() {
   const [cpassword, setCpassword] = useState("");
 
   function register() {
-    if (password != cpassword) {
+    if (password !== cpassword) {
       alert("passwords do not match!");
     } else {
       const user = {
