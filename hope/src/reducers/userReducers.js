@@ -12,7 +12,9 @@ export const registerUserReducer = (state = {}, action) => {
     case "USER_REGISTER_FAILED":
       return {
         loading: false,
-        success: action.payload,
+        error: action.payload,
       };
+    default:
+      return state;
   }
 };
