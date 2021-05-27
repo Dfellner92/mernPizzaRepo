@@ -60,3 +60,8 @@ select {
 .col-md-4 {
   text-align: right;
 }
+
+input {
+  margin-top: 10px !important;
+  box-shadow: none !important;
+}
