@@ -6,8 +6,10 @@ app.use(express.json());
 const db = require("./db");
 
 const pizzaRoutes = require("./routes/pizzaRoutes");
+const userRoutes = require("./routes/userRoutes");
 
 app.use("/api/pizza/", pizzaRoutes);
+app.use("/api/users/", userRoutes);
 
 app.get("/", (req, res) => {
   res.send("Server working 🔥");
