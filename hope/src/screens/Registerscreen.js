@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../actions/userActions";
+import Error from "../components/Error";
+import Success from "../components/Success";
+import Loading from "../components/Loading";
 
 export default function Registerscreen() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
+  const registerstate = useSelector((state) => state.registerUserReducer);
+  const { error, loading, success } = registerstate;
 
   const dispatch = useDispatch();
 
@@ -27,7 +32,11 @@ export default function Registerscreen() {
   return (
     <div>
       <div className="row justify-content-center mt-5">
-        <div className="col-md-5 mt-5 text-left">
+        <div className="col-md-5 mt-5 text-left shadow-lg p-3 mb-5 bg-white rounded">
+          {loading && <Loading />}
+          {success && <Success success="User registered successfully" />}
+          {error && <Error error="Email already registered" />}
+
           <h2 className="text-center m-2" style={{ fontSize: "35px" }}>
             Register
           </h2>
@@ -72,9 +81,13 @@ export default function Registerscreen() {
                 setCpassword(e.target.value);
               }}
             />
-            <button className="btn mt-3" onClick={register}>
+            <button className="btn  mt-2 mb-3" onClick={register}>
               REGISTER
             </button>
+            <br />
+            <a style={{ color: "black" }} href="/login" className="mt-2">
+              Click here to Login!
+            </a>
           </div>
         </div>
       </div>
