@@ -7,9 +7,11 @@ const db = require("./db");
 
 const pizzaRoutes = require("./routes/pizzaRoutes");
 const userRoutes = require("./routes/userRoutes");
+const ordersRoutes = require("./routes/orderRoutes");
 
 app.use("/api/pizza/", pizzaRoutes);
 app.use("/api/users/", userRoutes);
+app.use("/api/orders/", ordersRoutes);
 
 app.get("/", (req, res) => {
   res.send("Server working 🔥");

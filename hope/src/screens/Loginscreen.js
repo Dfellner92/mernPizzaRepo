@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../actions/userActions";
 import Error from "../components/Error";
-import Success from "../components/Success";
 import Loading from "../components/Loading";
 
 export default function Loginscreen() {

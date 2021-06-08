@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../actions/cartActions";
 
 const Pizza = ({ pizza }) => {
@@ -23,6 +23,7 @@ const Pizza = ({ pizza }) => {
       <h1>{pizza.name}</h1>
       <img
         src={pizza.image}
+        alt="pizza img"
         className="img-fluid"
         onClick={handleShow}
         style={{ height: "200px", width: "200px" }}
