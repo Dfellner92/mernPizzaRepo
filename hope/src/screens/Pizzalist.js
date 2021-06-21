@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllPizzas } from "../actions/pizzaActions";
+import { deletePizza, getAllPizzas } from "../actions/pizzaActions";
 import Error from "../components/Error";
 import Filter from "../components/Filter";
 import Loading from "../components/Loading";
@@ -51,7 +51,12 @@ export default function Pizzalist() {
                     </td>
                     <td>{pizza.category}</td>
                     <td>
-                      <i className="fa fa-trash m-2"></i>
+                      <i
+                        className="fa fa-trash m-2"
+                        onClick={() => {
+                          dispatch(deletePizza(pizza._id));
+                        }}
+                      ></i>
                       <Link to={`/admin/editpizza/${pizza._id}`}>
                         <i className="fa fa-edit m-2"></i>
                       </Link>

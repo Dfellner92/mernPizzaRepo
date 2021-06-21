@@ -72,3 +72,12 @@ export const editPizza = (editedpizza) => async (dispatch) => {
     dispatch({ type: "EDIT_PIZZA_FAILED", message: error });
   }
 };
+
+export const deletePizza = (pizzaid) => async (dispatch) => {
+  try {
+    const response = await axios.post("/api/pizza/deletepizza", { pizzaid });
+    alert("Pizza Deleted Successfully");
+    console.log(response);
+    window.location.reload();
+  } catch (error) {}
+};

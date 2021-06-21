@@ -47,15 +47,26 @@ router.post("/editpizza", async (req, res) => {
   try {
     const pizza = await Pizza.findOne({ _id: editedpizza._id });
 
-    pizza.name = editedpizza.name,
-    pizza.description = editedpizza.description,
-    pizza.image = editedpizza.image,
-    pizza.category = editedpizza.category,
-    pizza.prices = [editedpizza.prices];
+    (pizza.name = editedpizza.name),
+      (pizza.description = editedpizza.description),
+      (pizza.image = editedpizza.image),
+      (pizza.category = editedpizza.category),
+      (pizza.prices = [editedpizza.prices]);
 
     await pizza.save();
 
     res.send("Pizza Details Edited successfully");
+  } catch (error) {
+    return res.status(400).json({ message: error });
+  }
+});
+
+router.post("/deletepizza", async (req, res) => {
+  const pizzaid = req.body.pizzaid;
+
+  try {
+    await Pizza.findOneAndDelete({ _id: pizzaid });
+    res.send("Pizza Deleted successfully");
   } catch (error) {
     return res.status(400).json({ message: error });
   }
