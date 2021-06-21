@@ -36,3 +36,39 @@ export const filterPizzas = (searchkey, category) => async (dispatch) => {
     dispatch({ type: "GET_PIZZAS_FAILED" });
   }
 };
+
+export const addPizza = (pizza) => async (dispatch) => {
+  dispatch({ type: "ADD_PIZZAS_REQUEST" });
+  try {
+    const response = await axios.post("/api/pizza/addpizza", { pizza });
+    console.log(response);
+    dispatch({ type: "ADD_PIZZAS_SUCCESS" });
+  } catch (error) {
+    dispatch({ type: "ADD_PIZZAS_FAILED", payload: error });
+  }
+};
+
+export const getPizzaById = (pizzaId) => async (dispatch) => {
+  dispatch({ type: "GET_PIZZABYID_REQUEST" });
+
+  try {
+    const response = await axios.post("/api/pizza/getpizzabyid", { pizzaId });
+    console.log(response);
+    dispatch({ type: "GET_PIZZABYID_SUCCESS", payload: response.data });
+  } catch (error) {
+    dispatch({ type: "GET_PIZZABYID_FAILED", payload: error });
+  }
+};
+
+export const editPizza = (editedpizza) => async (dispatch) => {
+  dispatch({ type: "EDIT_PIZZA_REQUEST" });
+
+  try {
+    const response = await axios.post("/api/pizza/editpizza", { editedpizza });
+    console.log(response);
+    dispatch({ type: "EDIT_PIZZA_SUCCESS" });
+    window.location.href = "/admin/pizzalist";
+  } catch (error) {
+    dispatch({ type: "EDIT_PIZZA_FAILED", message: error });
+  }
+};

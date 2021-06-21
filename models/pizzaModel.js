@@ -1,9 +1,7 @@
-const { ObjectID } = require("bson");
 const mongoose = require("mongoose");
 
 const pizzaSchema = new mongoose.Schema(
   {
-    _id: { type: ObjectID, require },
     name: { type: String, require },
     varients: [],
     prices: [],
