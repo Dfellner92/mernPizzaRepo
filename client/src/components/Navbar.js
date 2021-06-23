@@ -24,6 +24,7 @@ export default function Navbar() {
                 <a
                   className="dropdown-toggle nav-link"
                   type="button"
+                  href=""
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
                   aria-haspopup="true"

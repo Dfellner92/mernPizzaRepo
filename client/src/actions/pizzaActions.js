@@ -26,7 +26,7 @@ export const filterPizzas = (searchkey, category) => async (dispatch) => {
       pizza.name.toLowerCase().includes(lowerCaseKey)
     );
 
-    if (category != "all") {
+    if (category !== "all") {
       filterPizzas = filterPizzas.filter((pizza) =>
         pizza.category.toLowerCase().slice(0, 3).includes(lowerCaseCategory)
       );
