@@ -1,5 +1,7 @@
 # PIZZA DEMO!
 
+![Image of HomeScreen](/readmeImages/home-screen.png)
+
 ### Overview
 
 PIZZA DEMO! is just a simple e-commerce app that uses the MERN stack. Upon login, users can view the cart, checkout, and view their orders. Powered by Stripe, the platform allows for dummy purchases using the following test login steps:
