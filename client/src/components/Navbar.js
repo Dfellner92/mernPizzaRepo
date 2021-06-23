@@ -11,7 +11,7 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
         <a className="navbar-brand" href="/">
-          Web Dev Shirts and Wear
+          Pizza Demo!
         </a>
 
         <div
@@ -20,35 +20,42 @@ export default function Navbar() {
         >
           <ul className="navbar-nav m1-auto">
             {currentUser ? (
-              <div className="dropdown">
-                <a
-                  className="dropdown-toggle nav-link"
-                  type="button"
-                  href=""
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  {currentUser.name}
-                </a>
-                <div
-                  className="dropdown-menu"
-                  aria-labelledby="dropdownMenuButton"
-                >
-                  <a className="dropdown-item" href="/orders">
-                    Orders
-                  </a>
+              <div>
+                <div className="dropdown">
                   <a
-                    className="dropdown-item"
-                    href="#"
-                    onClick={() => {
-                      dispatch(logoutUser());
-                    }}
+                    className="dropdown-toggle nav-link"
+                    type="button"
+                    href=""
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
                   >
-                    Logout
+                    {currentUser.name}
                   </a>
-                  <a className="dropdown-item" href="#"></a>
+                  <div
+                    className="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a className="dropdown-item" href="/orders">
+                      Orders
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href="#"
+                      onClick={() => {
+                        dispatch(logoutUser());
+                      }}
+                    >
+                      Logout
+                    </a>
+                  </div>
+                </div>
+
+                <div className="nav-item">
+                  <a className="nav-link" href="/cart">
+                    Cart {cartstate.cartItems.length}
+                  </a>
                 </div>
               </div>
             ) : (
@@ -58,12 +65,6 @@ export default function Navbar() {
                 </a>
               </li>
             )}
-
-            <li className="nav-item">
-              <a className="nav-link" href="/cart">
-                Cart {cartstate.cartItems.length}
-              </a>
-            </li>
           </ul>
         </div>
       </nav>

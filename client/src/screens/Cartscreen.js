@@ -18,7 +18,7 @@ export default function Cartscreen() {
     <div>
       <div className="row justify-content-center" data-aos="fade-up">
         <div className="col-md-6">
-          <h2 style={{ fontSize: "40px" }}>My Cart</h2>
+          <h2 className="cart-text" style={{ fontSize: "40px" }}>My Cart</h2>
 
           {cartItems.map((item) => (
             <div className="flex-container">
@@ -66,6 +66,7 @@ export default function Cartscreen() {
         </div>
         <div className="col-md-4 text-right">
           <h2 style={{ fontSize: "45px" }}>Subtotal: ${subtotal}</h2>
+          <h5 className="text-danger">($50 card minimum!)</h5>
           <Checkout subtotal={subtotal} />
         </div>
       </div>

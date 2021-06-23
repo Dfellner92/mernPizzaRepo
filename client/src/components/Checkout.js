@@ -21,11 +21,11 @@ export default function Checkout({ subtotal }) {
       {success && <Success success="Your Order was Placed Successfully" />}
 
       <StripeCheckout
-        amount={subtotal}
+        amount={subtotal * 100}
         shippingAddress
         token={tokenHandler}
         stripeKey="pk_test_51Iz4xKLMLLJCAzmY3SLcsOlwlhjyAX4DvkaIYIwb84gJWa4sgQgq4aU9CJU65zb8ryjkohlEWs1OcKG6DeizoA2400Z6GnxzQQ"
-        currency="USD"
+        currency="usd"
       >
         <button className="btn">Pay Now</button>
       </StripeCheckout>

@@ -88,3 +88,8 @@ th,
 tr {
   text-align: left;
 }
+
+.background-main {
+  background-image: url("./background-images/main.jpg");
+  margin-top: -50px !important;
+}

@@ -78,7 +78,7 @@ const Pizza = ({ pizza }) => {
       </div>
 
       <Modal show={show}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>{pizza.name}</Modal.Title>
         </Modal.Header>
 
