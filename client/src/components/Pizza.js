@@ -67,7 +67,7 @@ const Pizza = ({ pizza }) => {
       <div className="flex-container">
         <div className="w-100 m-1">
           <h1 className="mt-1">
-            Price : ${(pizza.prices[0][variant] * quantity) / 10 - 0.01}
+            Price : ${pizza.prices[0][variant] * quantity}
           </h1>
         </div>
         <div className="w-100 m-1">
