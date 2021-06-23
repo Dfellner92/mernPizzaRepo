@@ -15,3 +15,10 @@ PIZZA DEMO! is just a simple e-commerce app that uses the MERN stack. Upon login
         + card number '4242 4242 4242 4242'
         + expiration date '12/23'
         + CVV '123'
+
+### Technologies
+
+- React/Redux
+- Node/Express
+- MongoDb
+- Stripe
