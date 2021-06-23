@@ -29,8 +29,8 @@ export default function Filter() {
             className="form-control w-33"
           >
             <option value="all">All</option>
-            <option value="veg">Veg</option>
-            <option value="nonveg">Non-Veg</option>
+            <option value="tshirt">T-shirt</option>
+            <option value="nontshirt">Long Sleeve</option>
           </select>
         </div>
         <div className="col-md-2 w-33 mt-3">
