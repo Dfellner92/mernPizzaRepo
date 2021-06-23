@@ -6,5 +6,10 @@ PIZZA DEMO! is just a simple e-commerce app that uses the MERN stack. Upon login
 
     - Navigate to 'login' on the navbar
     - use username 'jeff' and password '123456'
-    - upon checkout, use email
-    'jeff@gmail.com', name 'jeff', any address you desire, card number '4242 4242 4242 4242', expiration date '12/23', and CVV '123'
+    - upon checkout, use
+        + email 'jeff@gmail.com'
+        + name 'jeff'
+        + any address you desire
+        + card number '4242 4242 4242 4242'
+        + expiration date '12/23'
+        + CVV '123'
